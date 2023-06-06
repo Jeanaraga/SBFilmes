@@ -1,0 +1,138 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .movies-section {
+    margin-bottom: 40px;
+  }
+  
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .movie {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+  }
+  
+  .movie img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .movie h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilos da navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Estilos do formulário do usuário */
+  footer {
+    background-color: #141414;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .user-info-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .user-info-form h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .user-info-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-box {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  /* Estilos adicionais */
+  button.like-button {
+    background-color: #e50914;
+  }
+  
+  button.comment-button {
+    background-color: #333;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  

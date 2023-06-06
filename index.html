@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SB Filmes</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+
+<body>
+  <header>
+    <div class="open-sidebar-button" onclick="toggleSidebar()">
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+    </div>
+    <div class="header-content">
+      <div class="logo">
+        <h1>Sem Braba Filmes</h1>
+      </div>
+      <div class="user-icon">
+        <i class="fas fa-user"></i>
+        <a href="./Login-Trabalho-Final-main/pagina-de-login.html">Login</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="embreve">
+      <h2>Em breve</h2>
+    </div>
+  
+    <div class="carousel">
+      <ul class="carousel-list">
+        <li><img src="assets/img/elemental2.jpg" alt="Filme 1"></li>
+        <li><img src="assets/img/besouro.jpg" alt="Filme 2"></li>
+        <li><img src="assets/img/missao.jpg" alt="Filme 3"></li>
+        <li><img src="assets/img/granturismo.jpg" alt="Filme 5"></li>
+        <!-- <li><img src="assets/img/the-flash-2023.png" alt="Filme 6"></li>
+        <li><img src="assets/img/transformers.jpg" alt="Filme 7"></li> -->
+        <!-- Adicione mais itens do carrossel aqui -->
+      </ul>
+    </div>
+  </main>
+
+  <section class="movies">
+    <div class="movie-section bg1">
+      <h2>Filmes em Alta</h2>
+    
+    
+      <div class="blocoFilmes">
+        <div class="filmesBloquinho">
+          <img src="assets/img/tesla.jpg" alt="Filme 1">
+          <h3>Tesla-O Homem Elétrico</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+        <div class="filmesBloquinho">
+          <img src="assets/img/vlzs.jpg" alt="Filme 2">
+          <h3>Velozes e Furiosos 10</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+        <div class="filmesBloquinho">
+          <img src="assets/img/temp.jpg" alt="Filme 3">
+          <h3>Tempestade</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+        <div class="filmesBloquinho">
+          <img src="assets/img/jwk.jpg" alt="Filme 4">
+          <h3>John Wick 4</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+      </div>
+    
+      <div class="blocoFilmes">
+        <div class="filmesBloquinho">
+          <img src="assets/img/exor.jpg" alt="Filme 5">
+          <h3>O Exorcista do Papa</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+        <div class="filmesBloquinho">
+          <img src="./assets/img/sereia.jpg" alt="Filme 5">
+          <h3>A Pequena Sereia</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+        <div class="filmesBloquinho">
+          <img src="assets/img/guardioes.jpg" alt="Filme 7">
+          <h3>Guardiões da Galáxia vol.3</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+        <div class="filmesBloquinho">
+          <img src="assets/img/orte.jpg" alt="Filme 8">
+          <h3>A Morte do Demônio</h3>
+          <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+        </div>
+      </div>
+    </div>
+
+      <div class="movie-section">
+        <h2>Lançamentos</h2>
+      
+        <div class="blocoFilmes">
+          <div class="filmesBloquinho">
+            <img src="assets/img/mario.jpg" alt="Filme 9">
+            <h3>Super Mario Bros</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+          <div class="filmesBloquinho">
+            <img src="assets/img/boogey.jpg" alt="Filme 10">
+            <h3>Boogeyman</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+          <div class="filmesBloquinho">
+            <img src="assets/img/mae.jpg" alt="Filme 11">
+            <h3>A Mãe do Ano</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+          <div class="filmesBloquinho">
+            <img src="assets/img/forca.jpg" alt="Filme 12">
+            <h3>Força Bruta</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+        </div>
+      
+        <div class="blocoFilmes">
+          <div class="filmesBloquinho">
+            <img src="assets/img/Sword.jpg" alt="Filme 13">
+            <h3>Sword Art Online:Progressive </h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+          <div class="filmesBloquinho">
+            <img src="assets/img/vizinho.jpg" alt="Filme 14">
+            <h3>Meu Vizinho Adolf</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+          <div class="filmesBloquinho">
+            <img src="assets/img/miranha.jpg" alt="Filme 15">
+            <h3>Homem Aranha:Através do Aranhaverso</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+          <div class="filmesBloquinho">
+            <img src="assets/img/forca.jpg" alt="Filme 12">
+            <h3>Força Bruta</h3>
+            <button class="favorite-button" onclick="toggleFavorite(this)">Curtir <i class="far fa-star"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      </section>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <ul>
+        <li><a href="index.html" class="menu-item">Início</a></li>
+        <li><a href="filmes.html" class="menu-item">Filmes</a></li>
+        <li><a href="sobre.html" class="menu-item">Sobre</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
