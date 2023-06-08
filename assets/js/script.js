@@ -85,6 +85,7 @@ function exitUser() {
     filmesBloquinhos.forEach(filmeBloquinho => {
       var tituloFilme = filmeBloquinho.querySelector("h3").innerText;
       var imagemFilme = filmeBloquinho.querySelector("img").src;
+      var linkFilme = filmeBloquinho.querySelector('a').href;
   
       if (localStorage.getItem('username')) {
         const username = localStorage.getItem('username');
@@ -93,7 +94,7 @@ function exitUser() {
         var favoritos = usuarios[username]?.favoritos || [];
   
         var filmeJaCurtido = favoritos.some(function(filme) {
-          return filme.titulo === tituloFilme && filme.imagem === imagemFilme;
+          return filme.titulo === tituloFilme && filme.imagem === imagemFilme && filme.link === linkFilme;
         });
   
         var button = filmeBloquinho.querySelector('.favorite-span');
@@ -120,6 +121,7 @@ function exitUser() {
     var filmesBloquinho = button.parentNode;
     var tituloFilme = filmesBloquinho.querySelector("h3").innerText;
     var imagemFilme = filmesBloquinho.querySelector("img").src;
+    var linkFilme = filmesBloquinho.querySelector('a').href;
   
     if (localStorage.getItem('username')) {
       const username = localStorage.getItem('username');
@@ -128,12 +130,12 @@ function exitUser() {
       var favoritos = usuarios[username]?.favoritos || [];
   
       var filmeJaCurtido = favoritos.some(function(filme) {
-        return filme.titulo === tituloFilme && filme.imagem === imagemFilme;
+        return filme.titulo === tituloFilme && filme.imagem === imagemFilme && filme.link === linkFilme;
       });
   
       if (filmeJaCurtido) {
         favoritos = favoritos.filter(function(filme) {
-          return filme.titulo !== tituloFilme || filme.imagem !== imagemFilme;
+          return filme.titulo !== tituloFilme || filme.imagem !== imagemFilme || filme.link !== linkFilme;
         });
   
         usuarios[username] = { ...usuarios[username], favoritos };
@@ -146,7 +148,7 @@ function exitUser() {
         console.log("Filmes favoritos do usuário:", favoritos);
       } else {
         if (favoritos.length < 12) {
-          favoritos.push({ titulo: tituloFilme, imagem: imagemFilme });
+          favoritos.push({ titulo: tituloFilme, imagem: imagemFilme, link: linkFilme });
   
           usuarios[username] = { ...usuarios[username], favoritos };
           localStorage.setItem("usuarios", JSON.stringify(usuarios));

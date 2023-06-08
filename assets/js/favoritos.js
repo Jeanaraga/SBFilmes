@@ -12,9 +12,11 @@ function preencherFilmesFavoritos() {
   
         var imgElement = blocoFilme.querySelector('img');
         var h3Element = blocoFilme.querySelector('h3');
+        var aElement = blocoFilme.querySelector('a');
   
         imgElement.src = filme.imagem;
         h3Element.innerText = filme.titulo;
+        aElement.href = filme.link;
       });
     }
   }
