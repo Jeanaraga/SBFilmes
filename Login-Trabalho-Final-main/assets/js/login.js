@@ -37,16 +37,13 @@ loginForm.addEventListener('submit', function(event) {
       // Redireciona o usuário para a página "index.html"
       localStorage.setItem('username', authenticatedUser.name);
       window.location.href = '../index.html';
-
     } else {
       // Caso as credenciais estejam incorretas, exibe uma mensagem de erro
-      errorMessage = createErrorMessage('Credenciais incorretas. Tente novamente.');
-      const errorContainer = document.querySelector('.error-container');
-      errorContainer.appendChild(errorMessage);
+      showUserNotFoundError();
     }
   } else {
     // Se não houver usuários salvos, exibe uma mensagem informando que não há dados
-    console.log('Nenhum dado de usuário encontrado.');
+    alert('Nenhum dado de usuário encontrado.');
   }
 });
 
@@ -62,4 +59,11 @@ function createErrorMessage(text) {
 function removeErrorMessage() {
   const errorContainer = document.querySelector('.error-container');
   errorContainer.innerHTML = ''; // Remove todos os elementos filhos
+}
+
+// Função para exibir mensagem de erro quando o usuário não for encontrado
+function showUserNotFoundError() {
+  errorMessage = createErrorMessage('Usuário não encontrado ou dados incorretos.');
+  const errorContainer = document.querySelector('.error-container');
+  errorContainer.appendChild(errorMessage);
 }
