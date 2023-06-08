@@ -64,10 +64,12 @@ header {
 }
 
 
-header h1 {
+.logo, .logo h1  {
   color: #e0e0e0;
   margin-left: 10px;
+  text-decoration: none;
 }
+
 /* FIM CABECALHO */
 
 /* SideBar */
