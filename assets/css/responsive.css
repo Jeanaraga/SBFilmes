@@ -39,7 +39,6 @@
         text-align: center;
         justify-content: space-around;
         gap: 0;
-        border: 1px solid red;
     }
     .container.img {
         display: none;
