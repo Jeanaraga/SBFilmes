@@ -22,7 +22,15 @@ if (localStorage.getItem('username')) {
   document.querySelector('.user-icon a').style.display = 'none';
 }
 
+function autoReloadPage(timeInSeconds) {
+  setTimeout(function() {
+    location.reload();
+  }, timeInSeconds * 1000);
+}
+
+
 function exitUser() {
+  autoReloadPage(1);
   alert('O usuário foi deslogado!')
   // Remover o nome do usuário do Local Storage
   localStorage.removeItem('username');
