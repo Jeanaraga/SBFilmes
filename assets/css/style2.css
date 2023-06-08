@@ -268,7 +268,7 @@ main .container .btn:hover {
   background: #1f1f1f86;
   color: #e0e0e0;
   transition: 0.3s ease-in ;
-
+  cursor: pointer;
 }
 
 .favorite-span:hover {
