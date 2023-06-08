@@ -77,7 +77,8 @@ form.addEventListener('submit', function(event) {
     alert('Cadastro realizado com sucesso!');
 
     // Redireciona para a página index.html
-    window.location.href = '../index.html';
+    localStorage.setItem('username', authenticatedUser.name);
+      window.location.href = 'pagina-de-login.html';
   } else {
     // Se o Local Storage não estiver disponível, exibe uma mensagem de erro
     alert('Desculpe, seu navegador não suporta o Local Storage.');

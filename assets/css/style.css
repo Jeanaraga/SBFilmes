@@ -43,14 +43,15 @@ header {
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 12%;
+  justify-content: center;
+  gap: 15px;
+  width: 30%;
   transition: 0.5 ease-in;
 }
 
  .user-icon a:hover {
-  color: #f87000;
-  border-bottom: 1px solid #f87000;
+  color: #f88d35;
+  border-bottom: 1px solid #f88d35;
 }
 
 .user-icon a {
@@ -58,12 +59,90 @@ header {
   text-decoration: none;
 }
 
+.usernameContainer {
+  font-size: 14px;
+}
+
 
 header h1 {
-  color: #f87000;
+  color: #e0e0e0;
   margin-left: 10px;
 }
 /* FIM CABECALHO */
+
+/* SideBar */
+
+.sidebar {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 100px;
+  left: -200px;
+  background-color: #ffffff;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0;
+  padding-top: 100px;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li a, .sidebar li button {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar li button {
+  background: none;
+  border: none;
+}
+
+.sidebar li a.selected,
+.sidebar li a:hover, .sidebar li button:hover {
+  background-color: #e0e0e0;
+  border: #33333300;
+  border-radius: 5px;
+  color: #f88d35;
+  font-size: 16px;
+}
+
+.open-sidebar-button {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #33333300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #f88d35;
+  margin-bottom: 3px;
+}
+
+.breve{
+  color: #fff;
+}
+
+/* FIM SIDEBAR */
 
 /* Carrossel */
 
@@ -122,13 +201,18 @@ header h1 {
   padding: 30px 0;
 }
 
-.movie-section h2, .embreve h2 {
+.movie-section h2 {
   font-size: 30px;
-  color: #fff;
+  color: #f88d35;
+  text-transform: uppercase;
   padding-left: 20px;
   text-shadow: #0A0908 3px 3px 2px;
   background: none;
-  
+}
+
+.embreve h2 {
+  font-size: 32px;
+  color: #e0e0e0;
 }
 
 
@@ -153,13 +237,19 @@ header h1 {
     justify-content: space-evenly;
 }
 
-.filmesBloquinho img {
-    width: 80%;
+.filmesBloquinho a{
+    width: 100%;
     height: 80%;
     box-shadow: 0 0 2px #e0e0e0;
 }
 
-.favorite-button {
+.filmesBloquinho a img {
+  width: 100%;
+  height: 100%;
+  filter: opacity(0.8);
+}
+
+.favorite-span {
   padding: 5px 20px;
   border: 1px solid #e0e0e0;
   background: #1f1f1f86;
@@ -168,7 +258,7 @@ header h1 {
 
 }
 
-.favorite-button:hover {
+.favorite-span:hover {
   padding: 5px 40px;
   background: #e0e0e0;
   color: #0A0908;
@@ -181,78 +271,24 @@ header h1 {
 }
 
 .filmesBloquinho img:hover{
-  transform: scale(1.05);
+  transform: scale(1.02);
+  cursor: pointer;
+  filter: opacity(1);
 }
 
 .filmesBloquinho h3 {
   color: #fff;
   font-size: 16px;
   text-align: center;
+  z-index: 1000;
+}
+
+.filmesBloquinho .attTrailer {
+  color: #e0e0e0;
+  font-size: larger;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 
-
-/* SideBar */
-
-.sidebar {
-  width: 200px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  padding-top: 100px;
-  left: -200px;
-  background-color: #ffffff;
-  transition: left 0.3s ease;
-}
-
-.sidebar.open {
-  left: 0;
-  padding-top: 100px;
-}
-
-.sidebar-content {
-  padding: 20px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar li a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-.sidebar li a.selected,
-.sidebar li a:hover {
-  background-color: #e0e0e0;
-  border: #33333300;
-  border-radius: 5px;
-  color: #f87000;
-}
-
-.open-sidebar-button {
-  cursor: pointer;
-  padding: 5px;
-  background-color: #33333300;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hamburger-icon {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin-bottom: 3px;
-}
-
-.breve{
-  color: #fff;
-}
 

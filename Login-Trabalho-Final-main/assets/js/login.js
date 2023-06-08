@@ -35,7 +35,9 @@ loginForm.addEventListener('submit', function(event) {
 
     if (authenticatedUser) {
       // Redireciona o usuário para a página "index.html"
-      window.location.href = 'index.html';
+      localStorage.setItem('username', authenticatedUser.name);
+      window.location.href = '../index.html';
+
     } else {
       // Caso as credenciais estejam incorretas, exibe uma mensagem de erro
       errorMessage = createErrorMessage('Credenciais incorretas. Tente novamente.');

@@ -1,0 +1,259 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+/* CABECALHO */
+
+header {
+	background-color: #0A0908;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+  }
+  
+  .header-content {
+	display: flex;
+	width: 98%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 15px;
+  }
+  
+  
+  .user-icon {
+	color: #e0e0e0;
+	font-size: x-large;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	width: 30%;
+	transition: 0.5 ease-in;
+  }
+  
+   .user-icon a:hover {
+	color: #f88d35;
+	border-bottom: 1px solid #f88d35;
+  }
+  
+  .user-icon a {
+	color: #e0e0e0;
+	text-decoration: none;
+  }
+  
+  .usernameContainer {
+	font-size: 14px;
+  }
+  
+  
+  header h1 {
+	color: #e0e0e0;
+	margin-left: 10px;
+  }
+  /* FIM CABECALHO */
+  
+  /* SideBar */
+  
+  .sidebar {
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	padding-top: 100px;
+	left: -200px;
+	background-color: #ffffff;
+	transition: left 0.3s ease;
+  }
+  
+  .sidebar.open {
+	left: 0;
+	padding-top: 100px;
+  }
+  
+  .sidebar-content {
+	padding: 20px;
+  }
+  
+  .sidebar ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .sidebar li a, .sidebar li button {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #000000;
+	margin-bottom: 10px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .sidebar li button {
+	background: none;
+	border: none;
+  }
+  
+  .sidebar li a.selected,
+  .sidebar li a:hover, .sidebar li button:hover {
+	background-color: #e0e0e0;
+	border: #33333300;
+	border-radius: 5px;
+	color: #f88d35;
+	font-size: 16px;
+  }
+  
+  .open-sidebar-button {
+	cursor: pointer;
+	padding: 5px;
+	background-color: #33333300;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .hamburger-icon {
+	width: 25px;
+	height: 3px;
+	background-color: #f88d35;
+	margin-bottom: 3px;
+  }
+
+
+/* 0. Variáveis*/
+
+:root {
+	--ff-primary: "Cairo", sans-serif;
+
+	--clr-background: #F5F5F5;
+	--clr-white: #F1FCDE;
+	--clr-black: #090E01;
+	--clr-light-green: #DEF8AF;
+	--clr-medium-green: #9107a3;
+	--clr-dark-green: #ee6407;
+
+	--spacing: 0.25rem;
+	--transition: all 0.2s linear;
+	--dark-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* 1. Estilos Gerais*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--ff-primary);
+	background: var(--clr-background);
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 1.8;
+	color: #ffffff
+}
+
+section {
+	min-height: 37rem;
+	padding: 1.6rem;
+}
+
+section:nth-child(odd) {
+	background: #2c2c2c;
+
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.section__titulo {
+	font-size: 4.8rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-top: 1.6rem;
+	padding-bottom: 1.6rem;
+	text-align: center;
+	color: #9107a3;
+}
+
+.section__titulo--destaque {
+	color: #ee6407;
+}
+
+@media screen and (max-width: 625px) {
+	section:nth-child(odd) {
+		padding-top: 5.6rem;
+		padding-bottom: 5.6rem;
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	section {
+		padding: 1.6rem calc((100% - 117rem -1.6rem) / 2);
+	}
+}
+
+
+
+/* 4. Sobre Nós */
+
+.sobre-texto {
+	margin: 1.6rem;
+}
+
+.sobre-texto__titulo {
+	font-size: 2.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: .8rem;
+	color: white;
+}
+
+@media screen and (min-width: 768px) {
+	.sobre-c {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.sobre-texto {
+		flex: 6 1 1rem;
+		margin-left: 1.5rem;
+	}
+
+	.sobre-c__img {
+		flex: 1 1 1rem;
+		margin-right: 1.5rem;
+		height: 600px;
+		width: 500px;
+		padding-top: 0px;
+
+
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.sobre {
+		height: 100vh;
+
+	}
+}

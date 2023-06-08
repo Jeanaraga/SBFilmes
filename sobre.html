@@ -1,29 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meu Site de Streaming de Filmes</title>
-  <link rel="stylesheet" type="text/css" href="assets/style2/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sobre</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style3.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 </head>
+
 <body>
   <header>
-    <div class="open-sidebar-button" onclick="toggleSidebar()">
+    <div class="open-sidebar-span" onclick="toggleSidebar()">
       <div class="hamburger-icon"></div>
       <div class="hamburger-icon"></div>
       <div class="hamburger-icon"></div>
     </div>
-    <h1>Meu Site de Streaming de Filmes</h1>
-  </header>
-  
-  <div class="sidebar" id="sidebar">
-    <div class="sidebar-content">
-        <ul>
-          <li><a href="index.html" class="menu-item">Início</a></li>
-          <li><a href="filmes.html" class="menu-item">Filmes</a></li>
-          <li><a href="sobre.html" class="menu-item">Sobre</a></li>
-        </ul>
+    <div class="header-content">
+      <div class="logo">
+        <h1>SB Filmes</h1>
+      </div>
+      <div class="user-icon">
+        <i class="fas fa-user"></i>
+        <a href="./Login-Trabalho-Final-main/pagina-de-login.html">Login</a>
+        <div id="usernameContainer"></div>
       </div>
     </div>
+  </header>
+
+
 
   <script src="assets/script/script.js"></script>
+  <section id="sobre" class="sobre">
+    <div class="sobre-c">
+      <img
+        src="https://img.freepik.com/fotos-gratis/executivos-de-negocios-andando-em-um-lobby-de-centro-de-conferencias_107420-63851.jpg?w=360&t=st=1686166100~exp=1686166700~hmac=7b518e6154966ab47c1f9e8cc51b974495b3d5c2a102fa977a5bceff69fb71e0"
+        alt="O que é?" class="sobre-c__img">
+      <div class="sobre-texto">
+        <h3 class="sobre-texto__titulo">Sobre Nos</h3>
+        <p>
+          Alunos da instituição PROZ programaram um site com um catálogo de filmes abrangente.
+          O objetivo era oferecer uma plataforma intuitiva onde os usuários pudessem encontrar filmes
+          facilmente.
+          O site possui recursos como busca avançada, listas de reprodução personalizadas, avaliações
+          e informações detalhadas sobre cada filme. O catálogo inclui uma variedade de gêneros e
+          filmes independentes. Os alunos estão orgulhosos do resultado e continuam aprimorando o
+          site.
+          Convidam a todos para explorarem essa plataforma cinematográfica excepcional.
+          <br>
+        <p>
+          O grupo e constituido pelos integrantes: Ana, Felip, Jean, Mateus, Maísa, Otávio ,Pedro, Tales.
+        </p>
+      </div>
+
+
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <ul>
+            <li><a href="index.html" class="menu-item">Início</a></li>
+            <li><a href="filmes.html" class="menu-item">Filmes</a></li>
+            <li><a href="favoritos.html" class="menu-item">Favoritos</a></li>
+            <li><a href="sobre.html" class="menu-item">Sobre</a></li>
+            <li><button onclick="exitUser()">Sair da conta</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <script src="./assets/js/sidebar.js"></script>
 </body>
+
 </html>
