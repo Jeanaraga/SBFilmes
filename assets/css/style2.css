@@ -230,26 +230,34 @@ main .container .btn:hover {
 
 
 .blocoFilmes {
-    width: 100%;
-    height: 70vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.bm {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+width: 50%;
+height: 70vh;
 }
 
 .filmesBloquinho {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
 .filmesBloquinho a{
     width: 100%;
     height: 80%;

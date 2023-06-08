@@ -148,6 +148,10 @@ header {
 
 /* Carrossel */
 
+.img-responsive {
+  display: none;
+}
+
 .embreve {
   width: 100%;
   height: 10vh;
@@ -220,18 +224,27 @@ header {
 
 .blocoFilmes {
     width: 100%;
-    height: 70vh;
+    max-width: 1500px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
+.bm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 70vh;
+}
+
 .filmesBloquinho {
-    width: 20%;
+    width: 45%;
     height: 100%;
     display: flex;
     flex-direction: column;
