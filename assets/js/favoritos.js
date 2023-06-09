@@ -1,3 +1,4 @@
+
 function preencherFilmesFavoritos() {
     if (localStorage.getItem('username')) {
       const username = localStorage.getItem('username');

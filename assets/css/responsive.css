@@ -65,6 +65,12 @@
     .logo h1 {
         font-size: medium;
     }
+    .logo img  {
+        width: 20px;
+    }
+    .logo span {
+        font-size: 30px;
+    }
     .embreve h2 {
         font-size: medium;
     }
@@ -79,5 +85,18 @@
     }
     main .container h2 {
         font-size: medium;
+    }
+    .logo {
+        margin-left: 5px;
+    }
+    .logo img {
+        width: 0px;
+    }
+    .logo span {
+        font-size: 20px
+    }
+    .user-icon {
+        width: 50%;
+        font-size: 12px;
     }
 }

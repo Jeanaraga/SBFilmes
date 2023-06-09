@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
-
+body {
+	background: #2c2c2c !important;
+}
 
 
 /* CABECALHO */
@@ -19,6 +24,7 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 9999;
+	height: 10vh;
   }
   
   .header-content {
@@ -57,10 +63,21 @@ header {
   }
   
   
-  .logo, .logo h1  {
+  .logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: #e0e0e0;
 	margin-left: 10px;
 	text-decoration: none;
+  }
+  
+  
+  
+  .logo span {
+	width: 40px;
+	font-size: 40px;
+	color: #f88d35;
   }
   /* FIM CABECALHO */
   
@@ -152,18 +169,6 @@ header {
 
 
 /* 1. Estilos Gerais*/
-html {
-	font-size: 62.5%;
-}
-
-body {
-	font-family: var(--ff-primary);
-	background: var(--clr-background);
-}
-
-a {
-	text-decoration: none;
-}
 
 p {
 	font-size: 1.6rem;
@@ -172,13 +177,34 @@ p {
 }
 
 section {
-	min-height: 37rem;
-	padding: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	height: 90vh;
+	margin-top: 10vh;
+	background: #2c2c2c;
 }
 
-section:nth-child(odd) {
-	background: #2c2c2c;
+.sobre-c {
+	width: 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.sobre-c img {
+	width: 70%;
+	filter: drop-shadow(13px 5px 10px #000);
+}
+
+.sobre-texto {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
 }
 
 img {
@@ -186,75 +212,52 @@ img {
 	height: auto;
 }
 
-.section__titulo {
-	font-size: 4.8rem;
-	font-weight: 900;
-	text-transform: uppercase;
-	padding-top: 1.6rem;
-	padding-bottom: 1.6rem;
+.sobre-texto h1 {
+	color: #f88d35;
+	text-shadow: #0A0908 3px 3px 2px;
+	font-size: xx-large;
+}
+
+.sobre-texto p {
+	font-size: large;
 	text-align: center;
-	color: #9107a3;
 }
 
-.section__titulo--destaque {
-	color: #ee6407;
-}
-
-@media screen and (max-width: 625px) {
-	section:nth-child(odd) {
-		padding-top: 5.6rem;
-		padding-bottom: 5.6rem;
-	}
-}
-
-@media screen and (min-width: 1170px) {
+@media screen and (max-width: 920px) {
 	section {
-		padding: 1.6rem calc((100% - 117rem -1.6rem) / 2);
-	}
-}
-
-
-
-/* 4. Sobre Nós */
-
-.sobre-texto {
-	margin: 1.6rem;
-}
-
-.sobre-texto__titulo {
-	font-size: 2.8rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: .8rem;
-	color: white;
-}
-
-@media screen and (min-width: 768px) {
-	.sobre-c {
 		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
+		flex-direction: column-reverse;
+		justify-content: center;
+		height: auto;
+		gap: 40px;
+		margin: 15vh 0 5vh 0;
 	}
-
+	.sobre-c {
+		width: 90%;
+		display: flex;
+	}
+	.sobre-c img {
+		width: 90%;
+		filter: drop-shadow(13px 5px 10px #000);
+	}
 	.sobre-texto {
-		flex: 6 1 1rem;
-		margin-left: 1.5rem;
-	}
-
-	.sobre-c__img {
-		flex: 1 1 1rem;
-		margin-right: 1.5rem;
-		height: 600px;
-		width: 500px;
-		padding-top: 0px;
-
-
+		width: 90%;
 	}
 }
 
-@media screen and (min-width: 960px) {
-	.sobre {
-		height: 100vh;
+@media screen and (max-width: 650px) {
+	.user-icon {
+		width: 50%;
+		font-size: medium;
+	}
+	.logo h1{
+		font-size: larger;
+		margin-left: 0px;
+	}
+}
 
+@media screen and (max-width: 650px) {
+	.sobre-texto p {
+		font-size: smaller;
 	}
 }

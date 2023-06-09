@@ -66,10 +66,21 @@ header {
 }
 
 
-.logo, .logo h1  {
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #e0e0e0;
   margin-left: 10px;
   text-decoration: none;
+}
+
+
+
+.logo span {
+  width: 40px;
+  font-size: 40px;
+  color: #f88d35;
 }
 /* FIM CABECALHO */
 
