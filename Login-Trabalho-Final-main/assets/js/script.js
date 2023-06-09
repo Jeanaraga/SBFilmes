@@ -12,12 +12,28 @@ const password = document.querySelector('#password').value;
 const confirmPassword = document.querySelector('#senha2').value;
 const dateOfBirth = document.querySelector('#datebirth').value;
 
+function validateName(name) {
+  if (name.length === 1 || /^\d+$/.test(name)) {
+    // Exibe uma mensagem de erro caso o nome contenha apenas uma letra ou apenas números
+    alert('O nome não pode ter apenas uma letra ou apenas números.');
+    return false;
+  }
+  return true;
+}
+
+
 // Verifica se algum dos campos está vazio
 if (name === '' || email === '' || password === '' || dateOfBirth === '') {
   // Exibe uma mensagem de erro caso algum campo esteja vazio
   alert('Por favor, preencha todos os campos obrigatórios.');
   return; // Encerra a função para impedir o envio do formulário
 }
+
+// Verifica se o nome contém apenas uma letra ou apenas números
+if (!validateName(name)) {
+  return; // Encerra a função para impedir o envio do formulário
+}
+
 
 // Verifica o formato da data de nascimento
 const dateOfBirthRegex = /^\d{4}-\d{2}-\d{2}$/;
